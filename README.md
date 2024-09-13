@@ -1,5 +1,7 @@
 # Trading Stock Prediction: Tesla, GM, and Ford
 
+![image](https://github.com/user-attachments/assets/5236a88b-3f6d-491c-b774-68aa34423176)
+
 This project is a web-based application built using **FastAPI** for stock price forecasting and analysis. The application fetches historical stock data for Tesla (TSLA), Ford (F), and General Motors (GM), and provides visual forecasts based on **3-month Moving Average**, **6-month Moving Average**, and **Exponential Smoothing**. Users can interact with the app through a simple HTML interface and generate dynamic forecast graphs.
 
 ## Project Structure
