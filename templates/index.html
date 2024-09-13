@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Stock Forecast</title>
+</head>
+<body>
+    <h1>Stock Forecast</h1>
+
+    <!-- Display error message if any -->
+    {% if error %}
+        <div style="color: red;">{{ error }}</div>
+    {% endif %}
+
+    <!-- Form for selecting stock, date range, and forecast type -->
+    <form action="/forecast" method="post">
+        <label for="stock">Select Stock:</label>
+        <select id="stock" name="stock" required>
+            <option value="TSLA" {% if stock == "TSLA" %}selected{% endif %}>Tesla</option>
+            <option value="F" {% if stock == "F" %}selected{% endif %}>Ford</option>
+            <option value="GM" {% if stock == "GM" %}selected{% endif %}>General Motors</option>
+        </select>
+
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required value="{{ start_date }}"
+        min="2022-01-01" max="2024-01-01">
+
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required value="{{ end_date }}"
+        min="2022-01-01" max="2024-01-01">
+
+        <label for="forecast_type">Forecast Type:</label>
+        <div>
+            <input type="radio" id="3m" name="forecast_type" value="3m" required {% if forecast_type == "3m" %}checked{% endif %}>
+            <label for="3m">3-month Moving Average</label>
+
+            <input type="radio" id="6m" name="forecast_type" value="6m" required {% if forecast_type == "6m" %}checked{% endif %}>
+            <label for="6m">6-month Moving Average</label>
+
+            <input type="radio" id="exponential_smoothing" name="forecast_type" value="exponential_smoothing" required {% if forecast_type == "exponential_smoothing" %}checked{% endif %}>
+            <label for="exponential_smoothing">Exponential Smoothing</label>
+        </div>
+
+        <button type="submit">Generate Forecast</button>
+    </form>
+
+    {% if image_path %}
+        <h2>Forecast for {{ stock }}</h2>
+        <p>Date Range: {{ start_date }} to {{ end_date }}</p>
+        <!-- Display the generated graph -->
+        <img src="/{{ image_path }}" alt="Forecast Graph" width="800px">
+    {% endif %}
+</body>
+</html>
