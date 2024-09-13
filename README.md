@@ -2,6 +2,9 @@
 
 ![image](https://github.com/user-attachments/assets/5236a88b-3f6d-491c-b774-68aa34423176)
 
+
+![Advantages of Representing Data Pipelines as DAGs in Apache Airflow _ Coursera - Google Chrome 29-06-2024 15_09_16](https://github.com/user-attachments/assets/a3c40e0d-481d-4696-9078-320a7577a067)
+
 This project is a web-based application built using **FastAPI** for stock price forecasting and analysis. The application fetches historical stock data for Tesla (TSLA), Ford (F), and General Motors (GM), and provides visual forecasts based on **3-month Moving Average**, **6-month Moving Average**, and **Exponential Smoothing**. Users can interact with the app through a simple HTML interface and generate dynamic forecast graphs.
 
 ## Project Structure
