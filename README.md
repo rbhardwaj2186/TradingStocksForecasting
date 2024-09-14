@@ -4,10 +4,9 @@
 
 
 
-<video width="600" height="400" autoplay loop muted>
-  <source src="https://github.com/user-attachments/assets/deb1121a-1e64-41b8-bb51-a0ccea662cd4/video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+https://github.com/user-attachments/assets/17a3722f-856d-41bf-829a-f1a413fbaf4f
+
 
 
 This project is a web-based application built using **FastAPI** for stock price forecasting and analysis. The application fetches historical stock data for Tesla (TSLA), Ford (F), and General Motors (GM), and provides visual forecasts based on **3-month Moving Average**, **6-month Moving Average**, and **Exponential Smoothing**. Users can interact with the app through a simple HTML interface and generate dynamic forecast graphs.
